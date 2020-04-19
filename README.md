@@ -9,6 +9,6 @@ XR Interaction Toolkit preview - 0.9.4
 XR Plugin Manager 3.2.7
 
 Functionalities/features:
-1. Unity XR Input system
-2. Scriptable Objects used for XR Input (currently boolean button presses)
-3. Unity XR Locomotion system
+1. Unity XR Input system https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@0.9/manual/index.html
+2. Scriptable Objects used for XR Input (currently boolean button presses) "per VR with Andrew tutorial" https://www.youtube.com/watch?v=NdHGuj-u-kc
+3. Unity XR Locomotion system https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@0.9/manual/locomotion.html
