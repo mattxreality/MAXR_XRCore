@@ -3,7 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 /* USAGE:
- * Assign as to a GameObject that should react to button presses (down/up) boolean values.
+ * Assign to a GameObject that should react to button presses (down/up) boolean values.
  * 
  */
 
