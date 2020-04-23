@@ -15,6 +15,8 @@ public class InputManager : MonoBehaviour
 {
     // List of button handler scriptable objects
     public List<ButtonHandler> allButtonHandlers = new List<ButtonHandler>();
+    public List<AxisHandler2D> allAxisHandlers2D = new List<AxisHandler2D>();
+    public List<AxisHandler> allAxisHandlers = new List<AxisHandler>();
 
     private XRController controller = null;
 
@@ -26,6 +28,8 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         HandleButtonEvents();
+        HandleAxis2DEvents();
+        HandleAxisEvents();
     }
 
     private void HandleButtonEvents()
@@ -39,13 +43,19 @@ public class InputManager : MonoBehaviour
     // vector2 values controller inputs
     private void HandleAxis2DEvents()
     {
-
+        foreach (AxisHandler2D handler in allAxisHandlers2D)
+        { 
+            handler.HandleState(controller); 
+        }
     }
 
     // float values controller inputs
     public void HandleAxisEvents()
     {
-
+        foreach (AxisHandler handler in allAxisHandlers)
+        { 
+            handler.HandleState(controller); 
+        }
     }
 }
 

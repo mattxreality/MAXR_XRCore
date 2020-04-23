@@ -50,12 +50,12 @@ public class InputListener : MonoBehaviour
 
     private void ButtonDown(XRController controller)
     {
-        print("Button down" + controller);
+        //print("Button down" + controller);
         actionDown.Invoke();
     }
     private void ButtonUp(XRController controller)
     {
-        print("Button Up" + controller);
+        //print("Button Up" + controller);
         actionUp.Invoke();
     }    
 }

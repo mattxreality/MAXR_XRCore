@@ -28,13 +28,11 @@ public class RandomTumble : MonoBehaviour
     public void ActivateTumbling()
     {
         activateTumble = true;
-        print("activate tumbling");
     }
 
     public void DeactivateTumbling()
     {
         activateTumble = false;
-        print("DEactivate tumbling");
     }
 
 }

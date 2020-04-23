@@ -24,6 +24,10 @@ public class ButtonHandler : InputHandler
 
     // value from the previous frame. Helps keep track of when a button changes state (up/down)
     private bool previousPress = false;
+    public bool IsPressed
+    {
+        get { return previousPress; }
+    }
 
     public override void HandleState(XRController controller)
     {

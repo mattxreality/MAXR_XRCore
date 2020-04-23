@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e0d88aba2150c64fa76faaa3f9fda90, type: 3}
-  m_Name: PrimaryAxis
+  m_Script: {fileID: 11500000, guid: e88c8ac9e1cbfa246984b37b2e373a2c, type: 3}
+  m_Name: TriggerR
   m_EditorClassIdentifier: 
   axis: 1
