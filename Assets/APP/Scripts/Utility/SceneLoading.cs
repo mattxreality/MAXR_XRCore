@@ -4,12 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
+/* I should use SOs for this function. I could use the scene manager to
+ * store the target scene index in an SO and retrieve it for use by this script. 
+ * 
+ * 
+ */
+
 public class SceneLoading : MonoBehaviour
 {
     public static SceneLoading singleton;
 
     [SerializeField]
     private Image progressBar;
+    
+    // call this from the scene manager to set the load scene
     public int sceneIndexToLoad = 2;
 
     private void Awake()
