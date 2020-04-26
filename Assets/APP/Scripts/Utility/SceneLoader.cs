@@ -9,10 +9,11 @@ public class SceneLoader : MonoBehaviour
     
     [Tooltip("In seconds")][SerializeField] float loadDelay = 5f;
 
-    [SerializeField] float levelLoadTime = 1f;
-    int highestSceneIndex;
-    int nextScene;
-    int currentScene;  // create an integer variable for storing the current scene index
+    [SerializeField] float levelLoadTime = 3f;
+    private int highestSceneIndex;
+    private int nextScene;
+    private int currentScene;  // create an integer variable for storing the current scene index
+    private bool m_spashScreenCompleted = false;
 
     void Awake()
     {
@@ -41,13 +42,15 @@ public class SceneLoader : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            LoadNextScene();
+            currentScene++;
+            LoadNextScene(currentScene);
         }
     }
 
     private void Update()
     {
-        if (Debug.isDebugBuild) { DebugGame(); } // debug controls for build settings
+        // debug controls for build settings
+        if (Debug.isDebugBuild) { DebugGame(); } 
 
         //int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
         //SceneManager.LoadScene(nextLevel);
@@ -64,27 +67,31 @@ public class SceneLoader : MonoBehaviour
         //}
     }
 
-    public void LoadFirstScene()
+    public void LoadMainMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
-    private void LoadNextScene()
+    public void LoadNextScene(int index)
     {
-        // if on last scene in build, load first scene in build
-        if (currentScene == highestSceneIndex)
+        // If this is the Splashscreen, load the main menu
+        if (currentScene == 0)
         {
-            currentScene = 0;
-            SceneManager.LoadScene(0);
+            m_spashScreenCompleted = true;
+            LoadMainMenu();
         }
         else
         {
-            currentScene = SceneManager.GetActiveScene().buildIndex;
-            nextScene = ++currentScene; // increase the current level integer by one
-            SceneManager.LoadScene(nextScene); // load the next level, which is current level increased by 1
-            print("currentScene = " + currentScene);
-            print("nextScene = " + nextScene);
-            print("totalScenes = " + highestSceneIndex);
+            SceneManager.LoadScene(index);
         }
+        //else
+        //{
+        //    currentScene = SceneManager.GetActiveScene().buildIndex;
+        //    nextScene = ++currentScene; // increase the current level integer by one
+        //    SceneManager.LoadScene(nextScene); // load the next level, which is current level increased by 1
+        //    print("currentScene = " + currentScene);
+        //    print("nextScene = " + nextScene);
+        //    print("totalScenes = " + highestSceneIndex);
+        //}
     }
 }
