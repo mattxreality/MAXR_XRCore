@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 24774b6e918e3c24a833857353a28b1b, type: 2}
+  m_Material: {fileID: 2100000, guid: a5af9d8cc212f284e85524aaa73519c8, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 8206670930696727964}
   - component: {fileID: 8206670930696727965}
   m_Layer: 5
-  m_Name: MAXR
+  m_Name: LOGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,13 +130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: cf6b972fdcfee6f459710087785ad8be, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e32abf3c088976d4a9e0cabf26067d7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3aeedbc39f082ee41a45e7bc70e05933, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb69db18d97049345b7c3e82d8e0e5a8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 8206670931873460287}
   - component: {fileID: 8206670931873460284}
   m_Layer: 5
-  m_Name: Oculus Sandbox loading (TMP)
+  m_Name: Loading (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8206670931873460287
 CanvasRenderer:
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oculus Sandbox... loading
+  m_text: loading...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -351,10 +351,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 8206670931873460284}
-    characterCount: 25
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8206670932360239510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a0e26be40f10af40bf6ec991db32c68, type: 3}
+  m_Script: {fileID: 11500000, guid: df423f4112511c94cb4e7a2431bd3513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 8206670931120674982}
