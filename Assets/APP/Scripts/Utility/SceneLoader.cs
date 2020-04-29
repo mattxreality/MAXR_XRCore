@@ -15,6 +15,8 @@ public class SceneLoader : MonoBehaviour
     private int currentScene;  // create an integer variable for storing the current scene index
     private bool m_spashScreenCompleted = false;
 
+    private int m_mainMenuBuildIndex = 2;
+
     void Awake()
     {
         // check if this is the only instance. If not, destroy this instance.
@@ -34,7 +36,7 @@ public class SceneLoader : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().buildIndex;  // get the active scene's index, stored as int
         print("currentScene = " + currentScene);
         print("highestSceneIndex = " + highestSceneIndex);
-        Invoke("LoadNextScene", levelLoadTime);
+        Invoke("SplashScreen", loadDelay);
 
     }
 
@@ -67,23 +69,25 @@ public class SceneLoader : MonoBehaviour
         //}
     }
 
+    private void SplashScreen()
+    {
+        // Will execute if running this method from standard scene
+        if (currentScene == 0 && !m_spashScreenCompleted)
+        {
+            m_spashScreenCompleted = true;
+            SceneManager.LoadScene(m_mainMenuBuildIndex);
+        }
+    }
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(2);
+            SceneManager.LoadScene(m_mainMenuBuildIndex);
     }
 
     public void LoadNextScene(int index)
     {
-        // If this is the Splashscreen, load the main menu
-        if (currentScene == 0)
-        {
-            m_spashScreenCompleted = true;
-            LoadMainMenu();
-        }
-        else
-        {
+
             SceneManager.LoadScene(index);
-        }
+        
         //else
         //{
         //    currentScene = SceneManager.GetActiveScene().buildIndex;

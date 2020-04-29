@@ -6,7 +6,7 @@ public class SceneChanger : MonoBehaviour
 {
 
     // you must know the scene index you want to change to.
-    public void LoadFirstScene(int index)
+    public void LoadScene(int index)
     {
         Debug.Log("Button Press for LoadTruckRepair");
         SceneLoader.instance.LoadNextScene(index);
