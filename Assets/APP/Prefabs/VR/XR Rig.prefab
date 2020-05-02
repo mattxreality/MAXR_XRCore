@@ -749,7 +749,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6815057669934061253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b4dc8dc7ebba5a44b6c9d8c40966f31, type: 3}
   m_Name: 
@@ -953,7 +953,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 100000
   field of view: 60
   orthographic: 0
